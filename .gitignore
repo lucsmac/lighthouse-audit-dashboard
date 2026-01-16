@@ -1,0 +1,28 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Data
+data/audits/*.json
+
+# Node
+node_modules/
+dashboard/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+CLAUDE.md
