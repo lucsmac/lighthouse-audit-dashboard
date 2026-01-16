@@ -36,7 +36,7 @@ if (existsSync(targetDir) || lstatSync(targetDir, { throwIfNoEntry: false })) {
 
 mkdirSync(targetDir, { recursive: true })
 
-cpSync(sourceDir, targetDir, { recursive: true })
+cpSync(sourceDir, targetDir, { recursive: true, dereference: true })
 
 console.log('Audit data copied successfully!')
 console.log(`  From: ${sourceDir}`)
