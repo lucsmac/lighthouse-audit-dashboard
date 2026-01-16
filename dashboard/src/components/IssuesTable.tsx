@@ -15,22 +15,27 @@ function getPageSpeedUrl(domain: string): string {
   return `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(url)}`;
 }
 
-const IMPACT_CONFIG: Record<ImpactLevel, { label: string; color: string; bg: string }> = {
-  high: { label: 'Alto', color: 'text-red-700', bg: 'bg-red-100' },
-  medium: { label: 'Médio', color: 'text-yellow-700', bg: 'bg-yellow-100' },
-  low: { label: 'Baixo', color: 'text-gray-600', bg: 'bg-gray-100' },
-};
-
 function ImpactBadge({ impact, metrics }: { impact?: ImpactLevel; metrics?: string[] }) {
   const level = impact || 'low';
-  const config = IMPACT_CONFIG[level];
   const metricsText = metrics?.length ? metrics.join(', ') : 'Diagnóstico';
 
   return (
     <div className="flex flex-col gap-1">
-      <span className={`px-2 py-1 text-xs font-medium rounded-full ${config.bg} ${config.color}`}>
-        {config.label}
-      </span>
+      {level === 'high' && (
+        <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-700">
+          Alto
+        </span>
+      )}
+      {level === 'medium' && (
+        <span className="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-700">
+          Médio
+        </span>
+      )}
+      {level === 'low' && (
+        <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-600">
+          Baixo
+        </span>
+      )}
       {metrics && metrics.length > 0 && (
         <span className="text-xs text-gray-500" title={`Afeta: ${metricsText}`}>
           {metricsText}

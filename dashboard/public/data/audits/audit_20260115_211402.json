@@ -39,6 +39,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP"
         ]
       },
       {
@@ -61,6 +65,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "medium",
+        "affectedMetrics": [
+          "FCP"
         ]
       },
       {
@@ -83,6 +91,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -105,6 +117,11 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP",
+          "FCP"
         ]
       },
       {
@@ -127,6 +144,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "medium",
+        "affectedMetrics": [
+          "SI"
         ]
       },
       {
@@ -149,6 +170,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -171,6 +196,11 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP",
+          "TBT"
         ]
       },
       {
@@ -193,6 +223,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP"
         ]
       },
       {
@@ -215,6 +249,11 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP",
+          "FCP"
         ]
       },
       {
@@ -237,6 +276,11 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP",
+          "FCP"
         ]
       },
       {
@@ -259,7 +303,9 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "total-blocking-time",
@@ -281,6 +327,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -303,6 +353,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       }
     ],
@@ -327,6 +381,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -349,6 +407,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -371,6 +433,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -393,6 +459,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "CLS"
         ]
       },
       {
@@ -415,6 +485,11 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "medium",
+        "affectedMetrics": [
+          "FCP",
+          "LCP"
         ]
       }
     ],
@@ -439,6 +514,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "medium",
+        "affectedMetrics": [
+          "LCP"
         ]
       },
       {
@@ -461,6 +540,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "medium",
+        "affectedMetrics": [
+          "FCP"
         ]
       },
       {
@@ -483,6 +566,11 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "medium",
+        "affectedMetrics": [
+          "FCP",
+          "LCP"
         ]
       },
       {
@@ -497,6 +585,10 @@
           "showroom",
           "showroom_fiat_v2",
           "showroom_renault"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "TBT"
         ]
       },
       {
@@ -518,7 +610,9 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "cumulative-layout-shift",
@@ -539,6 +633,10 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "CLS"
         ]
       },
       {
@@ -561,7 +659,9 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "lcp-discovery-insight",
@@ -581,7 +681,9 @@
           "portal_assinatura",
           "showroom_jeep_v2",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "font-display-insight",
@@ -598,7 +700,9 @@
           "showroom_bmw",
           "showroom_mercedes_trucks",
           "landingpage"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "cls-culprits-insight",
@@ -616,7 +720,9 @@
           "showroom_fiat_v2",
           "showroom_bmw",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "layout-shifts",
@@ -634,6 +740,10 @@
           "showroom_fiat_v2",
           "showroom_bmw",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "CLS"
         ]
       },
       {
@@ -653,6 +763,11 @@
           "showroom_renault",
           "showroom_jeep_v2",
           "showroom_ram"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP",
+          "FCP"
         ]
       },
       {
@@ -670,6 +785,11 @@
           "showroom_mercedes_trucks",
           "showroom_jeep_v2",
           "landingpage"
+        ],
+        "impact": "high",
+        "affectedMetrics": [
+          "LCP",
+          "TBT"
         ]
       },
       {
@@ -684,7 +804,9 @@
           "showroom",
           "landingpage",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "robots-txt",
@@ -699,7 +821,9 @@
           "showroom_renault",
           "showroom_jeep_v2",
           "landingpage"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "http-status-code",
@@ -712,7 +836,9 @@
           "showroom",
           "landingpage",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "viewport-insight",
@@ -724,7 +850,9 @@
         "temas": [
           "showroom",
           "landingpage"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "canonical",
@@ -737,7 +865,9 @@
           "showroom_mercedes_trucks",
           "showroom",
           "showroom_renault"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "link-text",
@@ -750,7 +880,9 @@
           "landingpage",
           "showroom_jeep_v2",
           "showroom_ram"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "is-crawlable",
@@ -761,7 +893,9 @@
         "percentage": 0.2,
         "temas": [
           "showroom"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       },
       {
         "id": "document-title",
@@ -772,7 +906,9 @@
         "percentage": 0.2,
         "temas": [
           "landingpage"
-        ]
+        ],
+        "impact": "low",
+        "affectedMetrics": []
       }
     ]
   },
