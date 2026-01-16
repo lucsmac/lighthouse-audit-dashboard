@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import type { Issue, Site } from '../types/audit';
+import type { Issue, Site, ImpactLevel } from '../types/audit';
 
 interface IssuesTableProps {
   critical: Issue[];
@@ -13,6 +13,31 @@ type TabType = 'critical' | 'frequent' | 'occasional';
 function getPageSpeedUrl(domain: string): string {
   const url = domain.startsWith('http') ? domain : `https://${domain}`;
   return `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(url)}`;
+}
+
+const IMPACT_CONFIG: Record<ImpactLevel, { label: string; color: string; bg: string }> = {
+  high: { label: 'Alto', color: 'text-red-700', bg: 'bg-red-100' },
+  medium: { label: 'Médio', color: 'text-yellow-700', bg: 'bg-yellow-100' },
+  low: { label: 'Baixo', color: 'text-gray-600', bg: 'bg-gray-100' },
+};
+
+function ImpactBadge({ impact, metrics }: { impact?: ImpactLevel; metrics?: string[] }) {
+  const level = impact || 'low';
+  const config = IMPACT_CONFIG[level];
+  const metricsText = metrics?.length ? metrics.join(', ') : 'Diagnóstico';
+
+  return (
+    <div className="flex flex-col gap-1">
+      <span className={`px-2 py-1 text-xs font-medium rounded-full ${config.bg} ${config.color}`}>
+        {config.label}
+      </span>
+      {metrics && metrics.length > 0 && (
+        <span className="text-xs text-gray-500" title={`Afeta: ${metricsText}`}>
+          {metricsText}
+        </span>
+      )}
+    </div>
+  );
 }
 
 export function IssuesTable({ critical, frequent, occasional, sites }: IssuesTableProps) {
@@ -75,6 +100,7 @@ export function IssuesTable({ critical, frequent, occasional, sites }: IssuesTab
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Issue</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Categoria</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Impacto</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sites Afetados</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">%</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exemplo</th>
@@ -83,7 +109,7 @@ export function IssuesTable({ critical, frequent, occasional, sites }: IssuesTab
           <tbody className="bg-white divide-y divide-gray-200">
             {issues.length === 0 ? (
               <tr>
-                <td colSpan={5} className="px-6 py-8 text-center text-gray-500">
+                <td colSpan={6} className="px-6 py-8 text-center text-gray-500">
                   Nenhum issue encontrado nesta categoria
                 </td>
               </tr>
@@ -104,6 +130,9 @@ export function IssuesTable({ critical, frequent, occasional, sites }: IssuesTab
                       }`}>
                         {issue.category}
                       </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <ImpactBadge impact={issue.impact} metrics={issue.affectedMetrics} />
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{issue.count}</td>
                     <td className="px-6 py-4 whitespace-nowrap">

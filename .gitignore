@@ -26,3 +26,5 @@ dashboard/dist/
 Thumbs.db
 
 CLAUDE.md
+.vercel
+.env*.local

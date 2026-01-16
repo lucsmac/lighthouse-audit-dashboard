@@ -12,6 +12,16 @@ export interface Scores {
   seo: number;
 }
 
+export type ImpactLevel = 'high' | 'medium' | 'low';
+
+export interface MetricSavings {
+  LCP?: number;  // ms
+  FCP?: number;  // ms
+  TBT?: number;  // ms
+  CLS?: number;  // score
+  SI?: number;   // ms
+}
+
 export interface Issue {
   id: string;
   title: string;
@@ -20,6 +30,9 @@ export interface Issue {
   count: number;
   percentage: number;
   temas: string[];
+  impact?: ImpactLevel;
+  metricSavings?: MetricSavings;
+  affectedMetrics?: string[];
 }
 
 export interface SiteIssue {
