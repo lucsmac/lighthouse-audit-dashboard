@@ -10,6 +10,11 @@ const targetDir = resolve(rootDir, 'public', 'data', 'audits')
 console.log('Copying audit data to public folder...')
 
 if (!existsSync(sourceDir)) {
+  // Check if data already exists in public (e.g., on Vercel where source won't exist)
+  if (existsSync(targetDir)) {
+    console.log('Source not found, but data already exists in public folder. Skipping copy.')
+    process.exit(0)
+  }
   console.warn('Warning: Source directory does not exist:', sourceDir)
   console.warn('Run the audit script first to generate data.')
   process.exit(0)

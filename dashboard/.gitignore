@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Copied audit data (generated during build)
-public/data/audits
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
